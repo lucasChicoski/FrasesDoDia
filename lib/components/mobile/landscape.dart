@@ -84,16 +84,22 @@ class LandScapeMobile extends StatelessWidget {
                   SizedBox(
                     height: 60,
                   ),
-                  Container(
-                    height: 100,
-                    child: Card(
-                      elevation: 15,
-                      child: Padding(
-                        padding: EdgeInsets.all(20),
-                        child: Container(
-                          width: 350,
-                          child: SingleChildScrollView(
-                              child: Text(phrasesRandom.phrase, style: TextStyle(fontSize: 20),)),
+                  Flexible(
+                    flex: 1,
+                    child: Container(
+                      height: 100,
+                      child: Card(
+                        elevation: 15,
+                        child: Padding(
+                          padding: EdgeInsets.all(20),
+                          child: Container(
+                            width: 350,
+                            child: SingleChildScrollView(
+                                child: Text(
+                              phrasesRandom.phrase,
+                              style: TextStyle(fontSize: 20),
+                            )),
+                          ),
                         ),
                       ),
                     ),

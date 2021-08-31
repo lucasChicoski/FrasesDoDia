@@ -5,13 +5,15 @@ import 'package:get_it/get_it.dart';
 
 import '../../break_points.dart';
 
+// ignore: must_be_immutable
 class Portrait extends StatelessWidget {
   PhrasesRandom phrasesRandom = GetIt.I<PhrasesRandom>();
   @override
   Widget build(BuildContext context) {
     return Align(
-        alignment: Alignment.topCenter,
-        child: Observer(builder: (_) {
+      alignment: Alignment.topCenter,
+      child: Observer(
+        builder: (_) {
           return Column(
             children: [
               Image.asset(imagemBooks, width: 300),
@@ -38,6 +40,8 @@ class Portrait extends StatelessWidget {
               )
             ],
           );
-        }));
+        },
+      ),
+    );
   }
 }
